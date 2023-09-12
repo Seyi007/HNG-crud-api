@@ -24,6 +24,13 @@ try:
 except:
     print("error: table could not be created!")
 
+
+# setting home url to display welcome message
+@app.route('/', methods=['GET'])
+def home_url():
+    return jsonify({"message": "Welcome! kindly use the api service"})
+
+
 # Create new person data
 INSERT_INTO_PERSON = "INSERT INTO persons(name) VALUES (%s) RETURNING id;"
 
