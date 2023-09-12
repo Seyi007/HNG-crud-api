@@ -28,7 +28,7 @@ except:
 # setting home url to display welcome message
 @app.route('/', methods=['GET'])
 def home_url():
-    return jsonify({"message": "Welcome! kindly use the api service"})
+    return jsonify({"message": "Welcome! kindly use the api service"}), 200
 
 
 # Create new person data
@@ -124,3 +124,6 @@ def delete_person(id):
         return jsonify({"message": f"person with id {id} has been deleted successfully!"}), 200
     except:
         return jsonify({"error": "operation failed!"})
+
+if __name__ == "__main__":
+    app.run()
