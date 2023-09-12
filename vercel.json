@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "api/crud.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "api/crud.py"
+        }
+    ]
+}
