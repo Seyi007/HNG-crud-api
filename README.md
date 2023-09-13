@@ -29,7 +29,7 @@ To run app:
 - Delete person: DELETE request to `https://hng-crud-api-500v.onrender.com/api/<person id>`, it retrun a success message.
 
 ## UML Diagram
-- ![alt text](https://drive.google.com/file/d/1fCgzUDib69ABhU3sKXGx_ORHSRAWpFZG/view?usp=drive_link)
+- ![alt text](https://lucid.app/lucidchart/67c04a12-250a-4061-a1e4-63c3ba5d9ee8/edit?invitationId=inv_df8649ea-4021-409b-b3b0-07e1b1744c17)
 ## Authors
 
 - [@seyi007](https://www.github.com/seyi007)
@@ -44,15 +44,15 @@ To run app:
 
 ## Test
 - Postman create person test:
-![alt text](https://drive.google.com/file/d/1-dFuNdV-LmX5WNyo17ZR4IJJUSk0yh2l/view?usp=drive_link)
+![alt text](https://github.com/Seyi007/HNG-crud-api/blob/main/api/images/create_person.png)
 
 - Postman get person test:
-![alt text](https://drive.google.com/file/d/1g0pmvcBqWwcrbPlgzIVvV5t7GJJq3_cy/view?usp=drive_link)
+![alt text](https://github.com/Seyi007/HNG-crud-api/blob/main/api/images/get_by_id.png)
 
 - Postman update person test:
-![alt text](https://drive.google.com/file/d/1hPRTtxj6NzB4y6DI-b62HoML5aDGsO-X/view?usp=drive_link)
+![alt text](https://github.com/Seyi007/HNG-crud-api/blob/main/api/images/update_person.png)
 
 - Postman delete test:
-![alt text](https://drive.google.com/file/d/1gKvsNngjnQCKno2CPOq2cBqG8xOZU1Mx/view?usp=drive_link)
+![alt text](https://github.com/Seyi007/HNG-crud-api/blob/main/api/images/delete_person.png)
 ## License
 MIT License
