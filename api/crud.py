@@ -77,7 +77,7 @@ def get_all():
 
 # Api endpoint to retrieve person data by id
 @app.route('/api/<int:id>', methods=['GET'])
-def get_person(id):
+def get_person_by_id(id):
     """Retrieves person data by id on api endpoint"""
     try:
         with connection:
@@ -93,7 +93,7 @@ def get_person(id):
 
 # Api endpoint to retrieve person data by name
 @app.route('/api/<string:name>', methods=['GET'])
-def get_person(name):
+def get_person_by_name(name):
     """Retrieves person data by id on api endpoint"""
     try:
         with connection:
