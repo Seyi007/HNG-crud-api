@@ -44,15 +44,15 @@ To run app:
 
 ## Test
 - Postman create person test:
-![alt text](https://drive.google.com/file/d/1-dFuNdV-LmX5WNyo17ZR4IJJUSk0yh2l/view?usp=drive_link)
+![alt text](https://github.com/Seyi007/HNG-crud-api/blob/main/api/images/create_person.png)
 
 - Postman get person test:
-![alt text](https://drive.google.com/file/d/1g0pmvcBqWwcrbPlgzIVvV5t7GJJq3_cy/view?usp=drive_link)
+![alt text](https://github.com/Seyi007/HNG-crud-api/blob/main/api/images/get_by_id.png)
 
 - Postman update person test:
-![alt text](https://drive.google.com/file/d/1hPRTtxj6NzB4y6DI-b62HoML5aDGsO-X/view?usp=drive_link)
+![alt text](https://github.com/Seyi007/HNG-crud-api/blob/main/api/images/update_person.png)
 
 - Postman delete test:
-![alt text](https://drive.google.com/file/d/1gKvsNngjnQCKno2CPOq2cBqG8xOZU1Mx/view?usp=drive_link)
+![alt text](https://github.com/Seyi007/HNG-crud-api/blob/main/api/images/delete_person.png)
 ## License
 MIT License
