@@ -79,17 +79,14 @@ def get_all():
 @app.route('/api/person/<int:id>', methods=['GET'])
 def get_person(id):
     """Retrieves person data by id on api endpoint"""
-    try:
-        with connection:
-            with connection.cursor() as cursor:
-                cursor.execute("SELECT * FROM persons WHERE id = %s", (id,))
-                person = cursor.fetchone()
-                if person:
-                    return jsonify({"id": person[0], "name": person[1]})
-                else:
-                    return jsonify({"error": f"person with id {id} not found"}), 404
-    except:
-        return jsonify({"error": f"id {id} could not be retrieved!"}), 500
+    with connection:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT * FROM persons WHERE id = %s", (id,))
+            person = cursor.fetchone()
+            if person:
+                return jsonify({"id": person[0], "name": person[1]})
+            else:
+                return jsonify({"error": f"person with id {id} not found"}), 404
 
 
 # api endpoint to update person data by id
