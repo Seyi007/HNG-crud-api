@@ -36,7 +36,7 @@ INSERT_INTO_PERSON = "INSERT INTO persons(name) VALUES (%s) RETURNING id;"
 
 
 # Api endpoint to create new person data
-@app.route('/api/person', methods=['POST'])
+@app.route('/api', methods=['POST'])
 def create_person():
     """Fucntion that creates new person's data 
     and saves to db through api endpoint"""
@@ -56,7 +56,7 @@ def create_person():
 SELECT_ALL_PERSON = "SELECT * FROM persons;"
 
 
-@app.route('/api/person', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def get_all():
     """Send a GET request to retrieve all person data from db on api endpoint"""
     try:
@@ -76,7 +76,7 @@ def get_all():
 
 
 # Api endpoint to retrieve person data by id
-@app.route('/api/person/<int:id>', methods=['GET'])
+@app.route('/api/<int:id>', methods=['GET'])
 def get_person(id):
     """Retrieves person data by id on api endpoint"""
     try:
@@ -91,9 +91,25 @@ def get_person(id):
     except:
         return jsonify({"error": f"id {id} could not be retrieved!"}), 500
 
+# Api endpoint to retrieve person data by name
+@app.route('/api/<string:name>', methods=['GET'])
+def get_person(name):
+    """Retrieves person data by id on api endpoint"""
+    try:
+        with connection:
+            with connection.cursor() as cursor:
+                cursor.execute("SELECT * FROM persons WHERE id = %s", (name,))
+                person = cursor.fetchone()
+                if person:
+                    return jsonify({"id": person[0], "name": person[1]})
+                else:
+                    return jsonify({"error": f"{name} not found"}), 404
+    except:
+        return jsonify({"error": f"{name} could not be retrieved!"}), 500
+
 
 # api endpoint to update person data by id
-@app.route('/api/person/<int:id>', methods=['PUT'])
+@app.route('/api/<int:id>', methods=['PUT'])
 def update_person(id):
     """api endpoint to change person data by id"""
     try:
@@ -112,7 +128,7 @@ def update_person(id):
 
 
 # api endpoint to delete person data by id
-@app.route('/api/person/<int:id>', methods=['DELETE'])
+@app.route('/api/<int:id>', methods=['DELETE'])
 def delete_person(id):
     """Deletes person data by id on api endpoint"""
     try:
