@@ -91,22 +91,6 @@ def get_person_by_id(id):
     except:
         return jsonify({"error": f"id {id} could not be retrieved!"}), 500
 
-# Api endpoint to retrieve person data by name
-@app.route('/api/<string:name>', methods=['GET'])
-def get_person_by_name(name):
-    """Retrieves person data by id on api endpoint"""
-    try:
-        with connection:
-            with connection.cursor() as cursor:
-                cursor.execute("SELECT * FROM persons WHERE id = %s", (name,))
-                person = cursor.fetchone()
-                if person:
-                    return jsonify({"id": person[0], "name": person[1]})
-                else:
-                    return jsonify({"error": f"{name} not found"}), 404
-    except:
-        return jsonify({"error": f"{name} could not be retrieved!"}), 500
-
 
 # api endpoint to update person data by id
 @app.route('/api/<int:id>', methods=['PUT'])
