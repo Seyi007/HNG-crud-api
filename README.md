@@ -29,7 +29,7 @@ To run app:
 - Delete person: DELETE request to `https://hng-crud-api-500v.onrender.com/api/<person id>`, it retrun a success message.
 
 ## UML Diagram
-- ![alt text](https://drive.google.com/file/d/1fCgzUDib69ABhU3sKXGx_ORHSRAWpFZG/view?usp=drive_link)
+- ![alt text](https://lucid.app/lucidchart/67c04a12-250a-4061-a1e4-63c3ba5d9ee8/edit?invitationId=inv_df8649ea-4021-409b-b3b0-07e1b1744c17)
 ## Authors
 
 - [@seyi007](https://www.github.com/seyi007)
