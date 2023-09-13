@@ -10,6 +10,13 @@ API endpoints fuction:
 - UPDATE: Modifying details of an existing person => `/api/user_id`
 - DELETE: Removing a person => `/api/user_id`
 
+## Prerequisites
+Before you clone, ensure to follow these steps:
+- Python 3.10.12: Install the latest python version as some dependecies will only run with the latest python version.
+ 
+- Virtual environment: Setup virtaul environment. To do so, see: [Virtualenv Wrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
+- Flask: Enter command: `pip install Flask` to install the latest version of flask
+
 ## Run App
 To run app:
 - Clone repo: `git clone https://github.com/Seyi007/HNG-crud-api.git`
@@ -21,15 +28,15 @@ To run app:
 
 
 ## API Usage
-- Create person: POST request to `https://hng-crud-api-500v.onrender.com/api` then send data through request body, eg: `{"name": "Daisy"}`.
+- Create person: POST request to `/api` then send data through request body, eg: `{"name": "Daisy"}`.
 
-- Get person: GET request to `https://hng-crud-api-500v.onrender.com/api/<person id>`, it returns person `id` and `name` eg: `{"id": <person id>, "name": "<person name>"`.
-- Update person: PUT request to `https://hng-crud-api-500v.onrender.com/api/<person id>`, the send data through request body eg: `{"name": "<new name>"}`. it returns a success message with new name.
+- Get person: GET request to `/api/<person id>`, it returns person `id` and `name` eg: `{"id": <person id>, "name": "<person name>"`.
+- Update person: PUT request to `/api/<person id>`, the send data through request body eg: `{"name": "<new name>"}`. it returns a success message with new name.
 
-- Delete person: DELETE request to `https://hng-crud-api-500v.onrender.com/api/<person id>`, it retrun a success message.
+- Delete person: DELETE request to `/api/<person id>`, it retrun a success message.
 
 ## UML Diagram
-- ![alt text](https://lucid.app/lucidchart/67c04a12-250a-4061-a1e4-63c3ba5d9ee8/edit?invitationId=inv_df8649ea-4021-409b-b3b0-07e1b1744c17)
+- ![alt text](https://github.com/Seyi007/HNG-crud-api/blob/main/api/images/uml.png)
 ## Authors
 
 - [@seyi007](https://www.github.com/seyi007)
